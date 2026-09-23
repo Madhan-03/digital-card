@@ -46,8 +46,9 @@ The goal of this project is to create a professional digital business card that 
 
 **Madhan Kumar**
 
-* GitHub     : [https://github.com/Madhan-03]
-* LinkedIn   : [https://www.linkedin.com/in/madhan-kumar-128644362/]
-* Portfolio  : [https://madhan-03.github.io/portfolio/]
+* GitHub       : [https://github.com/Madhan-03]
+* LinkedIn     : [https://www.linkedin.com/in/madhan-kumar-128644362/]
+* Portfolio    : [https://madhan-03.github.io/portfolio/]
+* Digital Card : [https://madhan-03.github.io/digital-card/]
 
 ---
