@@ -1,0 +1,371 @@
+/* =====================================
+   MODERN & SIMPLE UI/UX THEME
+   Mobile-First & Fully Responsive
+===================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background-color: #f4f7f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+  padding: 16px;
+  padding-top: max(16px, env(safe-area-inset-top));
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Card Container --- */
+.card-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.digital-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 32px 24px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06),
+    0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border: 1px solid #eef2f6;
+}
+
+/* Only apply hover effects on devices that support hover (desktops) */
+@media (hover: hover) {
+  .digital-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+      0 15px 35px rgba(0, 0, 0, 0.08),
+      0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* --- Profile Image --- */
+.profile-image-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #eef2ff;
+  margin-bottom: 18px;
+  background-color: #eef2ff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Typography (Fluid with clamp) --- */
+.name {
+  font-size: clamp(22px, 6vw, 26px);
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.title {
+  font-size: clamp(14px, 4vw, 16px);
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 18px;
+  line-height: 1.4;
+}
+
+.bio {
+  font-size: clamp(13px, 3.5vw, 14px);
+  line-height: 1.6;
+  color: #4b5563;
+  text-align: left;
+  margin-bottom: 22px;
+  padding: 0 4px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* --- Contact Pills --- */
+.contact-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.contact-pill {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: clamp(12px, 3.4vw, 14px);
+  color: #374151;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  min-height: 48px; /* Mobile touch target */
+  width: 100%;
+}
+
+@media (hover: hover) {
+  .contact-pill:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+    color: #111827;
+  }
+}
+
+.contact-pill:active {
+  background-color: #eef2f6;
+  transform: scale(0.99);
+}
+
+/* Equal Icon Width & Alignment */
+.contact-pill i {
+  color: #4f46e5;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Equal Starting Point for Text */
+.contact-pill span {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0; /* Critical for flexbox text truncation */
+}
+
+/* --- Social Icons --- */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  font-size: 18px;
+  text-decoration: none;
+  transition:
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s ease;
+  flex-shrink: 0;
+}
+
+.social-icon:nth-child(1) {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+.social-icon:nth-child(2) {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+.social-icon:nth-child(3) {
+  background-color: #fce7f3;
+  color: #db2777;
+}
+.social-icon:nth-child(4) {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+@media (hover: hover) {
+  .social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.social-icon:active {
+  transform: scale(0.95);
+}
+
+/* --- Action Buttons --- */
+.action-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 50px; /* Mobile touch target */
+  padding: 14px;
+  border-radius: 12px;
+  font-size: clamp(14px, 3.6vw, 15px);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary {
+  background-color: #4f46e5;
+  color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+}
+
+@media (hover: hover) {
+  .btn-primary:hover {
+    background-color: #4338ca;
+    box-shadow: 0 6px 8px -1px rgba(79, 70, 229, 0.3);
+    transform: translateY(-1px);
+  }
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+  background-color: #4338ca;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+@media (hover: hover) {
+  .btn-secondary:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+    color: #111827;
+  }
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+  background-color: #f9fafb;
+}
+
+/* =====================================
+   RESPONSIVE BREAKPOINTS
+===================================== */
+
+/* Small Mobile (iPhone SE, Galaxy Fold, etc.) */
+@media (max-width: 360px) {
+  .digital-card {
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+  .profile-image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+  .contact-pill {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  .social-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+  .social-links {
+    gap: 10px;
+  }
+  .btn {
+    padding: 12px;
+  }
+}
+
+/* Standard Mobile */
+@media (max-width: 480px) {
+  body {
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .digital-card {
+    padding: 28px 20px;
+    border-radius: 22px;
+  }
+}
+
+/* Tablet & Desktop */
+@media (min-width: 481px) {
+  .card-container {
+    max-width: 440px;
+  }
+}
+
+/* Landscape mode on mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+  body {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  .profile-image-wrapper {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
